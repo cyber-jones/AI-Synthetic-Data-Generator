@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Why am I getting an 'IndexError: list index out of range' when iterating through a list?",
+    "answer": "An IndexError occurs when you attempt to access an element at an index that is outside the boundaries of the list. This often happens because Python uses zero-based indexing (the first element is 0) or because your loop ranges are slightly off (e.g., looping to a count equal to len(list)). Try using `range(len(my_list))` or iterating directly over the list items."
+  },
+  {
+    "question": "What causes the 'KeyError' in my Python dictionary, and how do I avoid it?",
+    "answer": "A KeyError is raised when you try to access a key that doesn't exist in a dictionary. To handle this gracefully without crashing your script, use the `.get()` method (e.g., `my_dict.get('key', 'default_value')`) or utilize `collections.defaultdict` to provide default values for missing keys."
+  },
+  {
+    "question": "Why does Python throw a 'TypeError: can only concatenate str (not 'int') to str'?",
+    "answer": "This error occurs because Python is a strongly typed language and does not automatically convert integers to strings during concatenation. You must explicitly cast the integer using `str()` or use f-strings, such as `print(f'The count is {count}')`, which handles the conversion automatically."
+  },
+  {
+    "question": "How do I debug a 'NameError: name 'x' is not defined' error?",
+    "answer": "A NameError means Python cannot find the variable or function you are referencing. This usually happens due to a typo in the variable name, trying to use a variable before it has been assigned, or attempting to access a local variable from the global scope (or vice versa). Check your spelling and scope levels."
+  },
+  {
+    "question": "What does 'AttributeError: 'NoneType' object has no attribute 'split()'' mean?",
+    "answer": "This happens when you call a method on a variable that is currently assigned to `None` instead of the expected type (like a string). This often occurs because a preceding function failed to return a value or returned None explicitly. Debug this by checking why the source function didn't return the expected data before it reached your current line."
+  }
+]
